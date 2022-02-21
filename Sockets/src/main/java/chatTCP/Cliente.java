@@ -19,7 +19,7 @@ public class Cliente {
 class VentanaCliente extends JFrame {
 	public VentanaCliente() {
 		setTitle("Cliente");
-		setBounds(700, 300, 500, 500);
+		setBounds(700, 300, 700, 1000);
 
 		LaminaCliente Lclient = new LaminaCliente();
 		add(Lclient);
