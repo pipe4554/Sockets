@@ -22,7 +22,7 @@ class VentanaServidor extends JFrame implements Runnable {
 
 	public VentanaServidor() {
 		setTitle("Servidor");
-		setBounds(700, 300, 500, 500);
+		setBounds(700, 300, 1000, 700);
 
 		JPanel miLamina = new JPanel();
 		miLamina.setLayout(new BorderLayout());
@@ -59,7 +59,7 @@ class VentanaServidor extends JFrame implements Runnable {
 				Socket SocketEnvio = new Socket("localhost", 9090);
 				DataOutputStream flujoSalida = new DataOutputStream(SocketEnvio.getOutputStream());
 				int randomNum = (int) Math.floor(Math.random()*(3000-1+1)+1);
-				flujoSalida.writeUTF("Número aleatorio: " + randomNum + "\nFecha: " + FechaActual + "\nHora: " + HoraActual+ "\n"+ Mensaje + "\n");
+				flujoSalida.writeUTF("NÃºmero aleatorio: " + randomNum + "\nFecha: " + FechaActual + "\nHora: " + HoraActual+ "\n"+ Mensaje + "\n");
 				
 				flujoSalida.close();
 				SocketEnvio.close();
