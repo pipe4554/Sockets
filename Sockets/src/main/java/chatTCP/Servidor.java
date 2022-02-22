@@ -47,7 +47,7 @@ class VentanaServidor extends JFrame implements Runnable {
 				Socket miSocket = servidor.accept();
 				DataInputStream flujoEntrada = new DataInputStream(miSocket.getInputStream());
 				String Mensaje = flujoEntrada.readUTF();
-				AreaTexto.append("Mensaje recibido" + Mensaje);
+				AreaTexto.append("Mensaje recibido" + Mensaje+ "\n");
 				miSocket.close();
 				
 				LocalDate FechaActual = LocalDate.now();
